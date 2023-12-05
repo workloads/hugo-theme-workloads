@@ -29,7 +29,6 @@ Check the theme in action [Live Demo](https://norlin-hugo.netlify.app/) |
 - Ajax load posts
 - Supports contact form (Formspree)
 - Supports MailChimp newsletter
-- Supports Disqus comments
 - Supports Google Analytics
 - Ionicons icons
 - Google Fonts
