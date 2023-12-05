@@ -1,4 +1,4 @@
-<!-- begin header -->
+{{/* begin header */}}
 <header class="header{{ if or (eq .Section "post") (eq .Section "posts") }}{{ else }} header--top{{ end }}">
   <div class="container">
     <div class="row">
@@ -62,6 +62,6 @@
     </div>
   </div>
 </header>
-<!-- end header -->
+{{/* end header */}}
 
 {{ partial "search.html" . }}

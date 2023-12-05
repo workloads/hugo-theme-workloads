@@ -1,4 +1,4 @@
-<!-- begin footer-widgets -->
+{{/* begin footer-widgets */}}
 <section class="footer-widgets">
   <div class="container">
     <div class="row">
@@ -8,19 +8,19 @@
     </div>
   </div>
 </section>
-<!-- end footer-widgets -->
+{{/* end footer-widgets */}}
 
-<!-- begin footer -->
+{{/* begin footer */}}
 <footer class="footer">
   <div class="container">
     <div class="row">
       <div class="col col-12">
         <div class="footer__inner">
-          <div class="copyright">{{ dateFormat "2006" now }} &copy; <a href="/">{{ .Site.Title }}</a>. All Right Reserved. Published with <a href="https://gohugo.io/">Hugo</a>.</div>
+          <div class="copyright">Made with <i class="fa-sharp fa-solid fa-heart"></i> by x<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>s.</div>
           {{ partial "social-links.html" . }}
         </div>
       </div>
     </div>
   </div>
 </footer>
-<!-- end footer -->
+{{/* end footer */}}
