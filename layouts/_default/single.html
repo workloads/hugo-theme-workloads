@@ -57,9 +57,7 @@
     <div class="post__content">
       {{ .Content }}
     </div>
-
-    {{ partial "share-buttons.html" . }}
-
+    
     {{ if or .NextInSection .PrevInSection }}
     <div class="post__navigation">
       {{ if .PrevInSection }}
