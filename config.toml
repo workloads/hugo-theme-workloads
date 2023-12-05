@@ -1,14 +1,8 @@
-#-------------------------------
-# General Site Settings
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "Norlin"
+# general site settings
+title           = "Workloads"
 googleAnalytics = "" # Add your identifier. For example UA-99631805-1.
-paginate = 8
 
-
-#-------------------------------
-# Main Menu
+# items for main menu, see https://gohugo.io/content-management/menus/#define-in-site-configuration
 [menu]
   [[menu.main]]
     identifier = "home"
@@ -28,13 +22,6 @@ paginate = 8
     url = "/contact"
     weight = 3
 
-  [[menu.main]]
-    identifier = "styleguide"
-    name = "Style Guide"
-    url = "/styleguide"
-    weight = 4
-
-
 [params]
   logo = "" # You can add own logo. For example "/images/logo.png".
   description = "Norlin – A Beautiful Dark Blog Theme for Hugo."
@@ -51,52 +38,24 @@ paginate = 8
     hero__image = "/images/01.jpg"
 
   [[params.social]]
+    icon = "ion-logo-github"
+    name = "GitHub"
+    link = "https://github.com/workloads"
+
+  [[params.social]]
     icon = "ion-logo-twitter"
-    name = "Twitter"
-    link = "https://twitter.com"
+    name = "X"
+    link = "https://x.com/wrklds"
 
   [[params.social]]
-    icon = "ion-logo-facebook"
-    name = "Facebook"
-    link = "https://facebook.com"
-
-  [[params.social]]
-    icon = "ion-logo-dribbble"
-    name = "Dribbble"
-    link = "https://dribbble.com"
+    icon = "ion-logo-youtube"
+    name = "YouTube"
+    link = "https://youtube.com/c/workloads"
 
   [[params.social]]
     icon = "ion-logo-instagram"
     name = "Instagram"
-    link = "https://instagram.com"
-
-  [[params.social]]
-    icon = "ion-logo-pinterest"
-    name = "Pinterest"
-    link = "https://pinterest.com"
-
-  [[params.social]]
-    icon = "ion-logo-youtube"
-    name = "Youtube"
-    link = "https://youtube.com"
-
-  [[params.social]]
-    icon = "ion-logo-github"
-    name = "Github"
-    link = "https://github.com/"
-
-  [[params.social]]
-    icon = "ion-logo-vimeo"
-    name = "Vimeo"
-    link = "https://vimeo.com"
-
-  # Example of adding a new link to the author section and footer:
-  # [[params.social]]
-  #   icon = "ion-logo-youtube"
-  #   name = "Youtube"
-  #   link = "https://youtube.com"
-
-  # Other icons can be found at https://ionicons.com/v4/
+    link = "https://instagram.com/wrklds"
 
 
   #-------------------------------
@@ -111,7 +70,7 @@ paginate = 8
   #-------------------------------
   # Contact Settings
   [params.contact]
-    email = "your@email.com" # Add your form_id
+    email = "hey@workloads.io" # Add your form_id
 
     # NOTE
     # Norlin comes with a built-in contact form, that you can use with Formspree service to handle up to 50 submissions per month for free. You could also easily switch to another contact form service if you want.
@@ -146,10 +105,12 @@ paginate = 8
     [markup.goldmark.renderer]
       unsafe = true
 
-
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
-
+  home = [
+    "HTML",
+    "RSS",
+    "JSON"
+  ]
 
 [markup.highlight]
   codeFences = true
