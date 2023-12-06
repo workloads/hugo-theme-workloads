@@ -1,0 +1,14 @@
+name        = "Workloads v1"
+description = "Workloads v1, a Hugo Theme based on Norlin."
+homepage    = "https://workloads.io/"
+min_version = "0.120.0"
+
+[author]
+name     = "Kerim Satirli"
+homepage = "https://github.com/ksatirli"
+
+[original]
+name     = "Norlin"
+author   = "nanxiaobei"
+homepage = "https://anvodstudio.com/hugo-themes/norlin"
+repo     = "https://anvodstudio.com/hugo-themes/norlin"
