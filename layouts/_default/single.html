@@ -63,8 +63,9 @@
       {{ if .PrevInSection }}
       <a class="prev" href="{{ .PrevInSection.Permalink }}" style="background-image: url('{{ .PrevInSection.Params.Image }}')">
         <div class="post__nav-box">
-          <div class="post__nav post__nav__prev"><i class="ion ion-md-arrow-round-back"></i> Previous
-            Page</div>
+          <div class="post__nav post__nav__prev">
+            <i class="fa-sharp fa-solid fa-arrow-left"></i> Previous Page
+          </div>
           <h4 class="post__nav__title">{{ .PrevInSection.Title }}</h4>
         </div>
       </a>
@@ -72,7 +73,9 @@
       {{ if .NextInSection }}
       <a class="next" href="{{ .NextInSection.Permalink }}" style="background-image: url('{{ .NextInSection.Params.Image }}')">
         <div class="post__nav-box">
-          <div class="post__nav post__nav__next">Next Page <i class="ion ion-md-arrow-forward"></i></div>
+          <div class="post__nav post__nav__next">
+            Next Page <i class="fa-sharp fa-solid fa-arrow-right"></i>
+          </div>
           <h4 class="post__nav__title">{{ .NextInSection.Title }}</h4>
         </div>
       </a>
