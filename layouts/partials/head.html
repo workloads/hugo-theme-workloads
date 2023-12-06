@@ -2,29 +2,35 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="{{ .Site.Params.theme_color }}">
 
   <title>{{ if not .IsHome }}{{ humanize .Title }} | {{ end }}{{ .Site.Title }}</title>
+  <meta name="description" content="{{if .IsHome }}{{ .Site.Params.description }}{{else}}{{ .Description }}{{ end }}">
+
+  {{/* Twitter Card */}}
+  <meta name="twitter:card" content="summary_large_image">
+
+  {{/* TODO: add author's Twitter handle */}}
+  <meta name="twitter:creator" content="@{{ if .IsHome }}{{ .Site.Params.Twitter.handle }}{{ else }}AUTHORTWITTERHANDLE{{ end }}">
+  <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+  <meta name="twitter:domain" content="{{ .Site.BaseURL }}">
+  <meta name="twitter:image" content="{{ if .IsHome }}{{ .Site.Params.hero_image | absURL }}{{ else }}{{ .Params.Image | absURL }}{{ end }}">
+  <meta name="twitter:site" content="{{ .Site.BaseURL }}">
+  <meta name="twitter:title" content="{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}">
+
+  {{/* OpenGraph */}}
+  <meta property="og:title" content="{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage }} {{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+  <meta property="og:image" content="{{ if .IsHome }}{{ .Site.Params.hero_image | absURL }}{{ else }}{{ .Params.Image | absURL }}{{ end }}">
+
   {{ with .OutputFormats.Get "rss" -}}
   {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
   {{ end }}
 
-  {{/* Twitter Card */}}
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
-  {{ if .IsHome}}<meta name="twitter:image" content="{{ .Site.Params.hero.hero__image | absURL }}">{{ else }}<meta name="twitter:image" content="{{ .Params.Image | absURL }}">{{ end }}
-
-  {{/* Facebook OpenGraph */}}
-  <meta property="og:title" content="{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}">
-  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
-  {{ if .IsHome}}<meta property="og:image" content="{{ .Site.Params.hero.hero__image | absURL }}">{{ else }}<meta property="og:image" content="{{ .Params.Image | absURL }}">{{ end }}
-
-  {{/* Fonts */}}
-  <link rel="preconnect" href="https://fonts.gstatic.com/">
+  {{/* Styling (Fonts, Icons, etc.) */}}
   <link rel="preconnect" href="https://kit.fontawesome.com/">
-
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" as="style">
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}">
 
   <script src="https://kit.fontawesome.com/{{ .Site.Params.fontawesome.identifier }}.js" crossorigin="anonymous"></script>
 
@@ -32,5 +38,4 @@
   {{ with resources.Get "sass/main.scss" | toCSS | minify }}
   <style>{{ .Content | safeCSS }}</style>
   {{ end }}
-
 </head>
