@@ -26,13 +26,13 @@
           <div class="post__bottom">
 
             <div class="post__author">
-              <a href="/about/" aria-label="{{.Site.Params.author.name}}">
-                <img class="article__author-image lazy" data-src="{{ .Site.Params.author.avatar | absURL }}" alt="{{.Site.Params.author.name}}'s Picture">
+              <a href="/about/" aria-label="{{ .Site.Params.author.name }}">
+                <img class="article__author-image lazy" data-src="{{ .Site.Params.author.avatar | absURL }}" alt="{{ .Site.Params.author.name }}'s Picture">
               </a>
             </div>
 
             <div class="post__bottom-meta">
-              <a class="post__author-link" href="/about/">{{.Site.Params.author.name}}</a>
+              <a class="post__author-link" href="/about/">{{ .Site.Params.author.name }}</a>
               <span>in</span>
               {{ if .Params.tags }}
               <span class="post-tags">
@@ -57,7 +57,7 @@
     <div class="post__content">
       {{ .Content }}
     </div>
-    
+
     {{ if or .NextInSection .PrevInSection }}
     <div class="post__navigation">
       {{ if .PrevInSection }}

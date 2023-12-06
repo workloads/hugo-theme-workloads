@@ -3,7 +3,7 @@
 
 {{ partial "head.html" . }}
 
-<body>
+<body class="is-in">
 
   {{ template "_internal/google_analytics.html" . }}
 
@@ -13,13 +13,11 @@
   <main class="content" aria-label="Content">
     {{ block "main" . }}{{ end }}
   </main>
-  <!-- end content -->
+  {{/* end content */}}
 
   <div class="top" title="Top"><i class="fa-sharp fa-solid fa-arrow-up"></i></div>
 
   {{ partial "footer.html" . }}
-
-  {{ partial "javascripts.html" . }}
 
 </body>
 
