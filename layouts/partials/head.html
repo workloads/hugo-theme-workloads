@@ -38,4 +38,7 @@
   {{ with resources.Get "sass/main.scss" | toCSS | minify }}
   <style>{{ .Content | safeCSS }}</style>
   {{ end }}
+
+  {{/* see https://gohugo.io/templates/internal/#google-analytics */}}
+  {{ template "_internal/google_analytics.html" . }}
 </head>
