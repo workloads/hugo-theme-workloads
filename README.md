@@ -2,20 +2,6 @@
 
 `workloads-v1` is a custom version of Anvod Studio's [Norlin](https://anvodstudio.com/hugo-themes/norlin) theme.
 
-## Features
+## Notes
 
-- 100% responsive and clean theme
-- Optimized for mobile devices
-- Image lazy loading
-- Minimal design
-- Featured post
-- Post navigation
-- Syntax highlighting
-- Instant search
-- Compatible with modern browsers
-- Medium style image zoom
-- Tags support
-- Ajax load posts
-- Supports Google Analytics
-- Font Awesome Pro Icons
-- Google Fonts
+The `workloads-v1` theme is a highly customized Hugo theme, with a focus on minimalism and a small number of (external) dependencies.
