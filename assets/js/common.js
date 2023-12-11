@@ -22,15 +22,6 @@ $(document).ready(function() {
     menuList.removeClass("is-open");
   }
 
-
-  /* =======================
-  // Animation Load Page
-  ======================= */
-  setTimeout(function(){
-    $('body').addClass('is-in');
-  },150)
-
-
   /* =======================
   // Scroll Top Button
   ======================= */
