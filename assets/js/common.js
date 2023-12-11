@@ -4,15 +4,8 @@ $(document).ready(function() {
   var menuOpenIcon = $(".nav__icon-menu"),
     menuCloseIcon = $(".nav__icon-close"),
     menuList = $(".menu-overlay"),
-    searchOpenIcon = $(".search-button"),
-    searchCloseIcon = $(".search__close"),
-    searchInput = $(".search__text"),
-    searchBox = $(".search");
 
-
-  /* =======================
-  // Menu and Search
-  ======================= */
+  /* Menu */
   menuOpenIcon.click(function () {
     menuOpen();
   })
@@ -21,14 +14,6 @@ $(document).ready(function() {
     menuClose();
   })
 
-  searchOpenIcon.click(function () {
-    searchOpen();
-  });
-
-  searchCloseIcon.click(function () {
-    searchClose();
-  });
-
   function menuOpen() {
     menuList.addClass("is-open");
   }
@@ -36,23 +21,6 @@ $(document).ready(function() {
   function menuClose() {
     menuList.removeClass("is-open");
   }
-
-  function searchOpen() {
-    searchBox.addClass("is-visible");
-    setTimeout(function () {
-      searchInput.focus();
-    }, 300);
-  }
-
-  function searchClose() {
-    searchBox.removeClass("is-visible");
-  }
-
-  $('.search, .search__box').on('click keyup', function (event) {
-    if (event.target == this || event.keyCode == 27) {
-      $('.search').removeClass('is-visible');
-    }
-  });
 
 
   /* =======================
@@ -134,6 +102,4 @@ $(document).ready(function() {
       $(".top").removeClass("is-active");
     }
   });
-
-
 });
