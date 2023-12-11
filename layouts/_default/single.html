@@ -27,7 +27,7 @@
 
             <div class="post__author">
               <a href="/about/" aria-label="{{ .Site.Params.author.name }}">
-                <img class="article__author-image lazy" data-src="{{ .Site.Params.author.avatar | absURL }}" alt="{{ .Site.Params.author.name }}'s Picture">
+                <img class="article__author-image" data-src="{{ .Site.Params.author.avatar | absURL }}" alt="{{ .Site.Params.author.name }}'s Picture">
               </a>
             </div>
 
@@ -96,7 +96,7 @@
 <section class="hero">
   <div class="hero__inner">
     <div class="hero__image">
-      <img class="lazy" data-src="{{ .Params.Image | absURL }}" alt="{{ .Title }}">
+      <img data-src="{{ .Params.Image | absURL }}" alt="{{ .Title }}">
     </div>
     <div class="hero__content">
       <h1 class="hero__title">{{ .Title }}</h1>

@@ -251,12 +251,3 @@ table tr:hover {
     height: auto;
   }
 }
-
-.lazy {
-  opacity: 0;
-  transition: 0.4s ease;
-}
-
-.lazy.loaded {
-  opacity: 1;
-}

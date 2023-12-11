@@ -4,7 +4,7 @@
   <div class="article__inner">
 
     <a class="article__image" href="{{ .RelPermalink }}">
-      <img class="lazy" data-src="{{.Params.Image | absURL }}" alt="{{ .Title }}">
+      <img data-src="{{ .Params.Image | absURL }}" alt="{{ .Title }}">
     </a>
 
     <div class="article__content">
@@ -22,7 +22,7 @@
 
           <div class="article__author">
             <a href="/about/" aria-label="{{ .Site.Params.author.name}}">
-              <img class="article__author-image lazy" data-src="{{ .Site.Params.author.avatar | absURL }}" alt="{{ .Site.Params.author.name}}'s Picture">
+              <img class="article__author-image" data-src="{{ .Site.Params.author.avatar | absURL }}" alt="{{ .Site.Params.author.name}}'s Picture">
             </a>
           </div>
 
