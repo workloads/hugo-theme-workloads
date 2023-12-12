@@ -3,7 +3,7 @@ $(document).ready(function() {
 
   var menuOpenIcon = $(".nav__icon-menu"),
     menuCloseIcon = $(".nav__icon-close"),
-    menuList = $(".menu-overlay"),
+    menuList = $(".menu-overlay");
 
   /* Menu */
   menuOpenIcon.click(function () {
